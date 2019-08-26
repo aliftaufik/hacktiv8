@@ -1,5 +1,5 @@
-var nama = 'Alex';
-var peran = 'Penyihir';
+var nama = 'Joshua';
+var peran = 'Ksatria';
 var pesan = '';
 
 if(nama !== '') {
