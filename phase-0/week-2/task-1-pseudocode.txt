@@ -1,0 +1,77 @@
+1.
+Pseudocode:
+START
+
+SET `mass` to 600
+SET `a` to 2
+SET `f` to CALCULATE 'mass' times 'a'
+DISPLAY 'f'
+
+END
+
+2.
+Algoritma:
+1. Masukkan tahun
+2. Buat variabel kabisat dengan nilai false
+3. Cek apakah tahun habis dibagi 4
+    3a. Apabila bisa, cek apakah tahun habis dibagi 100
+        3ai. Apabila bisa, cek apakah tahun habis dibagi 400
+            3ai1. Apabila bisa, maka ganti variabel kabisat menjadi true
+            3ai2. Apabila tidak bisa, keluar dari kondisional
+        3aii. Apabila tidak bisa, maka ganti variabel kabisat menjadi true
+    3b. Apabila tidak bisa, keluar dari kondisional
+4. Tampilkan kabisat
+
+Pseudocode:
+START
+
+INPUT 'year'
+SET 'kabisat' to false
+IF 'year' mod 4 is 0 THEN
+    IF 'year' mod 100 is 0 THEN
+        IF 'year' mod 400 is 0 THEN
+            SET 'kabisat' to true
+    ELSE
+        SET 'kabisat' to true
+DISPLAY 'kabisat'
+
+END
+
+3.
+Algoritma:
+1. Buat variabel penghitung dengan nilai 0
+2. Selama nilai penghitung di bawah 20 maka
+    2a. Tambah nilai penghitung dengan 1
+3. Nyalakan mesin cuci
+
+Pseudocode:
+START
+
+SET 'load' to 0
+WHILE 'load' < 20 THEN
+    ADD 'load' by 1
+DISPLAY "Turning on"
+
+END
+
+4.
+Algoritma
+1. Buat variabel penghitung dengan nilai 0
+2. Selama nilai penghitung di bawah 40 maka
+    2a. Cek kuku murid nomor urut sesuai nilai penghitung
+        2ai. Apabila panjang, maka hukum murid tersebut
+        2aii. Apabila tidak, maka beri pujian
+    2b. Tambahkan nilai penghitung dengan 1
+
+Pseudocode:
+START
+
+SET 'checked' to 0
+WHILE 'checked' < 40
+    IF 'student'['checked'] is "long"
+        DISPLAY "I will punish you!"
+    ELSE
+        DISPLAY "You are such a good student!"
+    ADD 'checked' by 1
+
+END
