@@ -1,11 +1,17 @@
 1.
+START
+
 SET 'mass' to 600
 SET 'a' to 2
 CALCULATE 'mass' times 'a'
 SET 'f' to calculation result
 DISPLAY 'f'
 
+END
+
 2.
+START
+
 INPUT 'year'
 SET 'kabisat' to false
 IF 'year' mod 4 is 0
@@ -16,13 +22,21 @@ IF 'year' mod 4 is 0
         SET 'kabisat' to true
 DISPLAY 'kabisat'
 
+END
+
 3.
+START
+
 SET 'load' to 0
 WHILE 'load' < 20
     ADD 'load' by 1
 DISPLAY "Turning on"
 
+END
+
 4.
+START
+
 SET 'checked' to 0
 WHILE 'checked' < 40
     IF 'student'['checked'] is "long"
@@ -31,3 +45,4 @@ WHILE 'checked' < 40
         DISPLAY "You are such a good student!"
     ADD 'checked' by 1
 
+END
