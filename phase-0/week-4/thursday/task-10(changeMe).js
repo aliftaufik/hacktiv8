@@ -4,7 +4,7 @@ function changeMe(arr) {
             firstName: arr[i][0],
             lastName: arr[i][1],
             gender: arr[i][2],
-            age: 2019 - arr[i][3] >= 2019 ? 'Invalid Bearth Year' : 2019 - arr[i][3]
+            age: 2019 - arr[i][3] >= 2019 || arr[i].length !== 4 ? 'Invalid Bearth Year' : 2019 - arr[i][3]
         }
         console.log('' + (i + 1) + '. ' + literal.firstName + ' ' + literal.lastName + ':')
         console.log(literal)
