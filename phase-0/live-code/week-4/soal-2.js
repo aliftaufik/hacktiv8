@@ -6,7 +6,7 @@ function reverseAll(arr) {
     for (var j = arr[i].length - 1; j >= 0; j--) {
       temp += arr[i][j]
     }
-    result.push(temp)
+    result.push(Number(temp))
   }
   return result
 }
