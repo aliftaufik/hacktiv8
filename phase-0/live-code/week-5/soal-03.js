@@ -8,6 +8,7 @@ function kenaRazia(date, data) {
 		'Tomang Raya'
 	]
 	if (date % 2 === 0) {
+		// if else untuk ngecek apakah tanggal sekarang genap/ganjil
 		var genap = true
 	} else {
 		var genap = false
@@ -15,17 +16,26 @@ function kenaRazia(date, data) {
 
 	var result = []
 	for (var i = 0; i < data.length; i++) {
+		// Cek apakah naik motor / mobil
+		if (data[i].type !== 'Mobil') {
+			continue
+		}
+		//
+		// Buat ambil plat nomer
 		var spaceCounter = 0
 		for (var p = 0; p < data[i].plat.length; p++) {
 			if (data[i].plat[p] === ' ') {
 				spaceCounter++
 				if (spaceCounter === 2) {
-					var lastNumber = Number(data[i].plat[p - 1])
+					var lastNumber = Number(data[i].plat[p - 1]) // p - 1 artinya angka yang tepat di depan spasi
 					break
 				}
 			}
 		}
+		//
+		// Ini baru ngecek pelanggarannya
 		if ((lastNumber % 2 === 0) !== genap) {
+			// Jika lastNumber Genap dan variabel genap true maka false
 			var tertilang = { name: data[i].name, tilang: 0 }
 			for (var j = 0; j < data[i].rute.length; j++) {
 				for (var k = 0; k < lokasiRazia.length; k++) {

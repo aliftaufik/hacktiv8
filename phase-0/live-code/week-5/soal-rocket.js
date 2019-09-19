@@ -1,28 +1,31 @@
 function jumlahTabungan(listHarga, history) {
-	var result = {}
+	var result = {} // buat direturn
 	var arrHistory = []
-	var string = ''
+	var string = '' // ngambil data dari listharga
 	var arrHarian = []
 	for (var i = 0; i < history.length; i++) {
 		if (history[i] === '-' || history[i] === ',') {
 			arrHarian.push(string)
 			string = ''
 		} else if (history[i] === '.') {
-			arrHarian.push(string)
+			arrHarian.push(string) // push sekali lagi karena string terakhir belum kepush (karena tidak ketemu '-' sama',')
 			arrHistory.push(arrHarian)
-			arrHarian = []
-			string = ''
+			arrHarian = [] // kosongin dan masukin masukin array baru
+			string = '' //kosongin string biar gak nyambung
 		} else {
 			string += history[i]
 		}
 	}
 	arrHarian.push(string)
-	arrHistory.push(arrHarian)
+	arrHistory.push(arrHarian) // Sama karena ini ada di ujung string input, jadi harus dipush manual
 
 	for (i = 0; i < arrHistory.length; i++) {
+		// loop buat ngitung sisa uang
 		result[arrHistory[i][0]] = 10000
 		for (var j = 1; j < arrHistory[i].length; j++) {
+			// loop makanan yang dia beli hari itu. Mulai dari index 1, karena index 0 isinya nama hari
 			for (var k = 0; k < listHarga.length; k++) {
+				// loop listharga buat dapetin harganya
 				if (arrHistory[i][j] === listHarga[k].nama) {
 					result[arrHistory[i][0]] -= listHarga[k].harga
 				}
